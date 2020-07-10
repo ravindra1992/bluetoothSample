@@ -7,48 +7,54 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnOn"
+        android:id="@+id/btntOn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:text="Bluetooth-ON"
-        app:layout_constraintBottom_toTopOf="@+id/btnOff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="400dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnOf"
+        android:text="On"
+        android:layout_marginLeft="10dp" />
 
     <Button
-        android:id="@+id/btnOff"
+        android:id="@+id/btnOf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:text="Bluetooth-OFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginBottom="400dp"
+
+        app:layout_constraintLeft_toRightOf="@+id/btntOn"
+        app:layout_constraintRight_toLeftOf="@+id/btndis"
+        android:text="Off" />
 
     <Button
         android:id="@+id/btndis"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DiscoverAnother"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/btnOf"
+        app:layout_constraintRight_toLeftOf="@+id/btnpair"
+        android:text="Discover" />
 
     <Button
         android:id="@+id/btnpair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GetPairDevice"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="400dp"
+
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/btndis"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Pair"
+        android:layout_marginRight="10dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

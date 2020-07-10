@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val btntOn: Button = findViewById(R.id.btnOn) as Button
-        val btnOf: Button = findViewById(R.id.btnOff) as Button
+        val btntOn: Button = findViewById(R.id.btntOn) as Button
+        val btnOf: Button = findViewById(R.id.btnOf) as Button
         val btndis:Button =findViewById(R.id.btndis) as Button
         val btnpair:Button =findViewById(R.id.btnpair) as Button
 
@@ -49,10 +49,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnpair.setOnClickListener {
-            val pairedDevices: Set<BluetoothDevice> = adapter.getBondedDevices()
-            if(pairedDevices.size>0){
-                 //TODO
-            }
+
+             startActivity(Intent(this,PairDeviceListActivity::class.java))
         }
     }
 }
